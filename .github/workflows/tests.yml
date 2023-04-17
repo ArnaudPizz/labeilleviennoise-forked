@@ -17,6 +17,8 @@ jobs:
           **/.cache
 
   lint-code:
+    runs-on: ubuntu-latest
+    steps:
     needs: install-packages
     - name: Download archive-node-modules
       uses: actions/download-artifact@v3
