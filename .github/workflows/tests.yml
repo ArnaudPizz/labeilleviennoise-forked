@@ -8,21 +8,11 @@ jobs:
     - run: npm install -g pnpm
     - run: pnpm install --no-frozen-lockfile
     - run: pnpm test
-    - name: Archive node_modules
-      uses: actions/upload-artifact@v3
-      with:
-        name: archive-node-modules
-        path: |
-          **/node_modules
-          **/.cache
 
   lint-code:
     needs: install-packages
     runs-on: ubuntu-latest
     steps:
-    - name: Download archive-node-modules
-      uses: actions/download-artifact@v3
-      with:
-        name: archive-node-modules
-
+    - run: npm install -g pnpm
+    - run: pnpm install --no-frozen-lockfile
     - run: pnpm lint
