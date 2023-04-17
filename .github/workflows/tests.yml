@@ -9,7 +9,7 @@ jobs:
     - run: pnpm install --no-frozen-lockfile
     - run: pnpm test
     - name: Archive node_modules
-      uses: actions/upload-artifacts@v3
+      uses: actions/upload-artifact@v3
       with:
         name: archive-node-modules
         path: |
