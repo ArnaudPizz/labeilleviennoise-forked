@@ -6,8 +6,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - run: npm install -g pnpm
-  testing-code:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - run: pnmp test
+    - run: pnpm test
