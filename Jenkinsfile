@@ -8,10 +8,10 @@ pipeline {
     stages {
         stage('Build'){ 
             steps {
-                sh 'corepack enable'
-                sh 'corepack prepare pnpm@latest-8 --activate'
-                sh 'pnpm install'
-                sh 'pnpm test'
+                sh 'sudo corepack enable'
+                sh 'sudo corepack prepare pnpm@latest-8 --activate'
+                sh 'sudo pnpm install'
+                sh 'sudo pnpm test'
             }
         }
     }
