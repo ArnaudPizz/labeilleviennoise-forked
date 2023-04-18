@@ -11,7 +11,7 @@ pipeline {
             steps {
                 sh 'corepack enable'
                 //sh 'corepack prepare pnpm@latest-8 --activate'
-                sh 'npm install --no-frozen-lockfile --legacy-peer-deps'
+                sh 'yarn install --legacy-peer-deps'
                 sh 'npm test'
                 sh 'npm run lint'
             }
