@@ -13,6 +13,7 @@ pipeline {
                 sh 'corepack prepare pnpm@latest-8 --activate'
                 sh 'pnpm install --no-frozen-lockfile'
                 sh 'pnpm test'
+                sh 'pnpm lint'
             }
         }
     }
