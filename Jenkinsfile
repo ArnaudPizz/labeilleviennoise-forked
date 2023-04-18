@@ -10,10 +10,10 @@ pipeline {
         stage('Build'){ 
             steps {
                 sh 'corepack enable'
-                sh 'corepack prepare pnpm@latest-8 --activate'
-                sh 'pnpm install --force --no-frozen-lockfile'
-                sh 'pnpm test'
-                sh 'pnpm lint'
+                //sh 'corepack prepare pnpm@latest-8 --activate'
+                sh 'npm install --no-frozen-lockfile --legacy-peer-deps'
+                sh 'npm test'
+                sh 'npm run lint'
             }
         }
     }
