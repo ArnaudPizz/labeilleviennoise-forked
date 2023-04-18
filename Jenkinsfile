@@ -11,7 +11,7 @@ pipeline {
                 sh 'corepack enable'
                 sh 'corepack prepare pnpm@latest-8 --activate'
                 sh 'pnpm install'
-	    	sh 'pnpm test'
+		sh 'pnpm test'
             }
         }
     }
