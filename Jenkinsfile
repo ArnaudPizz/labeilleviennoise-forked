@@ -1,12 +1,12 @@
 pipeline {
     agent {
         docker {
-            image 'node:lts-bullseye-slim' 
-            args '-p 3000:3000' 
+            image 'node:lts-bullseye-slim'
+            args '-p 3000:3000'
         }
     }
     stages {
-        stage('Build') { 
+        stage('Build'){ 
             steps {
                 sh 'corepack enable'
                 sh 'corepack prepare pnpm@latest-8 --activate'
