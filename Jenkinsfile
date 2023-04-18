@@ -1,7 +1,4 @@
 pipeline {
-    script{
-    System.setProperty("org.jenkinsci.plugins.durabletask.BourneShellScript.LAUNCH_DIAGNOSTICS","true")
-          }
     agent {
         docker {
             image 'node:lts-bullseye-slim' 
