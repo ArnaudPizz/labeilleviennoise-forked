@@ -28,6 +28,7 @@
     "@labeilleviennoise/build": "workspace:*",
     "@labeilleviennoise/eslint-config": "workspace:*",
     "@labeilleviennoise/prettier-config": "workspace:*",
+    "@remix-run/node": "1.9.0",
     "@types/jest": "^29.2.5",
     "@types/node": "^18.11.18",
     "@types/react": "^18.0.26",
@@ -37,9 +38,9 @@
     "husky": "^8.0.3",
     "lerna": "^6.4.0",
     "lint-staged": "^13.1.0",
+    "netlify-cli": "^14.1.0",
     "nodemon": "^2.0.20",
-    "prettier": "^2.8.2",
-    "@remix-run/node": "1.9.0"
+    "prettier": "^2.8.2"
   },
   "engines": {
     "node": ">=14"
