@@ -20,12 +20,12 @@ pipeline {
                 sh 'pnpm test'
                 sh 'pnpm lint'
             }
+        }
         stage('Deploy'){
             steps {
                 sh 'netlify deploy -s NETLIFY_SITE_ID -a NETLIFY_TOKEN'
             }
 
         }
-    }
   }
 }
