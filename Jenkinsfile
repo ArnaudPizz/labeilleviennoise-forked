@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Deploy'){
             steps {
-                sh 'netlify deploy -s NETLIFY_SITE_ID -a NETLIFY_TOKEN'
+                sh './node_modules/.bin/netlify deploy -s NETLIFY_SITE_ID -a NETLIFY_TOKEN'
             }
 
         }
