@@ -24,7 +24,7 @@ pipeline {
         stage('Deploy'){
             steps {
                 sh 'printenv'
-                sh './node_modules/.bin/netlify deploy -s $NETLIFY_SITE_ID -a $NETLIFY_TOKEN -d apps/website'
+                sh './node_modules/.bin/netlify deploy -s $NETLIFY_SITE_ID -a $NETLIFY_TOKEN -d apps/website/public'
             }
 
         }
