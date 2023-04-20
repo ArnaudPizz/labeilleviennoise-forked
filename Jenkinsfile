@@ -23,6 +23,7 @@ pipeline {
         }
         stage('Deploy'){
             steps {
+                sh 'pnpm run -w build --scope=labeilleviennoise.com --include-dependencies'
                 sh './node_modules/.bin/netlify deploy -s $NETLIFY_SITE_ID -a $NETLIFY_TOKEN -d apps/website/public'
             }
 
